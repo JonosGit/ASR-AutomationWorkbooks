@@ -9,7 +9,7 @@ Connect-AzAccount -ServicePrincipal `
     -CertificateThumbprint $connection.CertificateThumbprint
 # Connect-AzAccount
 
-$SubscriptionName = "Sundt Azure Dev/Test"
+$SubscriptionName = ""
 Set-AzContext -Subscription $SubscriptionName
 $RecoveryPlanContextObj = $RecoveryPlanContext
 $VMinfo = $RecoveryPlanContextObj.VmMap | Get-Member | Where-Object MemberType -EQ NoteProperty | select -ExpandProperty Name
